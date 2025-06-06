@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caio Vinicius Braga">
+    <link rel="stylesheet" href="..\estilos\Login.css">
+    <title>Login - NutriFácil</title>
+</head>
+<body>
+  <header class="CabecalhoIndex">
+    <div class="MenuCabecalho">
+        <div class="imagemLogoCabecalho">
+            <img onclick="window.location.href='index.html'" src="../imagens/logo.png" alt="ImagemLogo">
+        </div>
+    </div>
+  </header>
+  <main>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email ou usuário</label>
+        <input type="text" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="button" onclick="window.location.href='index.html'" class="login-button">Entrar</button>
+      </form>
+      <div class="login-footer">
+        <p>Esqueceu a senha? <a href="#">Recuperar</a></p>
+      </div>
+    </div>
+    </main>
+
+    <footer class="rodape">
+        <p>Desenvolvido por Caio Vinicius Braga</p>
+    </footer>
+
+    <script src="../codigo/api-config.js"></script>
+    <script src="../codigo/api-service.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const mensagemErro = document.getElementById('mensagem-erro');
+            mensagemErro.textContent = '';
+            
+            try {
+                const credentials = {
+                    email: document.getElementById('email').value,
+                    password: document.getElementById('password').value
+                };
+                
+                const response = await APIService.usuarios.login(credentials);
+                
+                // Login bem-sucedido - redireciona para a página inicial
+                window.location.href = 'index.html';
+                
+            } catch (error) {
+                mensagemErro.textContent = 'Email ou senha incorretos';
+            }
+        });
+    </script>
+</body>
+</html>

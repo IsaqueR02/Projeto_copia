@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - NutriFácil</title>
+</head>
+<body>
+    <h1>Cadastro - NutriFácil</h1>
+    <header class="CabecalhoIndex">
+        <div class="MenuCabecalho">
+            <div class="imagemLogoCabecalho">
+                <img onclick="window.location.href='index.html'" src="../imagens/logo.png" alt="ImagemLogo">
+            </div>
+
+            <div class="IntensCabecalhoIndex">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="linhaVertical"></div>
+            <div class="IntensCabecalhoIndex">
+                <a href="CalcularImc.html">Calculadoras</a>
+            </div>
+            <div class="linhaVertical"></div>
+            <div class="IntensCabecalhoIndex">
+                <a href="TiposDeDieta.html">Dietas</a>
+            </div>
+            <div class="linhaVertical"></div>
+            <div class="IntensCabecalhoIndex">
+                <a href="Login.html">Login</a>
+            </div>
+        </div>
+        <div class="BarraDeMenuCabecalho">
+            <p>Menu</p>
+        </div>
+    </header><header class="CabecalhoIndex">
+        <div class="MenuCabecalho">
+            <div class="imagemLogoCabecalho">
+                <img onclick="window.location.href='index.html'" src="../imagens/logo.png" alt="ImagemLogo">
+            </div>
+
+            <div class="IntensCabecalhoIndex">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="linhaVertical"></div>
+            <div class="IntensCabecalhoIndex">
+                <a href="CalcularImc.html">Calculadoras</a>
+            </div>
+            <div class="linhaVertical"></div>
+            <div class="IntensCabecalhoIndex">
+                <a href="TiposDeDieta.html">Dietas</a>
+            </div>
+            <div class="linhaVertical"></div>
+            <div class="IntensCabecalhoIndex">
+                <a href="Login.html">Login</a>
+            </div>
+        </div>
+        <div class="BarraDeMenuCabecalho">
+            <p>Menu</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        <form id="cadastroForm">
+            <div class="form-group">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmarSenha">Confirmar senha</label>
+                <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso" name="peso" step="0.1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="altura">Altura (cm)</label>
+                <input type="number" id="altura" name="altura" required>
+            </div>
+
+            <div class="form-group">
+                <label for="idade">Idade</label>
+                <input type="number" id="idade" name="idade" required>
+            </div>
+
+            <div class="form-group">
+                <label>Sexo</label>
+                <div class="radio-group">
+                    <input type="radio" id="sexoM" name="sexo" value="Masculino" required>
+                    <label for="sexoM">Masculino</label>
+                    <input type="radio" id="sexoF" name="sexo" value="Feminino">
+                    <label for="sexoF">Feminino</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="objetivo">Objetivo</label>
+                <select id="objetivo" name="objetivo" required>
+                    <option value="">Selecione</option>
+                    <option value="Perda de peso">Perda de peso</option>
+                    <option value="Ganho de massa">Ganho de massa</option>
+                    <option value="Manutenção">Manutenção</option>
+                    <option value="Saúde geral">Saúde geral</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dieta">Preferência de dieta</label>
+                <select id="dieta" name="dieta" required>
+                    <option value="">Selecione</option>
+                    <option value="Mediterrânea">Mediterrânea</option>
+                    <option value="Low Carb">Low Carb</option>
+                    <option value="Cetogênica">Cetogênica</option>
+                    <option value="Vegetariana">Vegetariana</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="alergias">Alergias alimentares (separe por vírgula)</label>
+                <input type="text" id="alergias" name="alergias">
+            </div>
+
+            <div id="mensagem-erro" class="erro-mensagem"></div>
+            <div id="mensagem-sucesso" class="sucesso-mensagem"></div>
+
+            <button type="submit" class="btn">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="form-group">
+        <label for="objetivo">Objetivo</label>
+        <select id="objetivo" name="objetivo" required>
+            <option value="">Selecione</option>
+            <option value="Perda de peso">Perda de peso</option>
+            <option value="Ganho de massa">Ganho de massa</option>
+            <option value="Manutenção">Manutenção</option>
+            <option value="Saúde geral">Saúde geral</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="dieta">Preferência de dieta</label>
+        <select id="dieta" name="dieta" required>
+            <option value="">Selecione</option>
+            <option value="Mediterrânea">Mediterrânea</option>
+            <option value="Low Carb">Low Carb</option>
+            <option value="Cetogênica">Cetogênica</option>
+            <option value="Vegetariana">Vegetariana</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="alergias">Alergias alimentares (separe por vírgula)</label>
+        <input type="text" id="alergias" name="alergias">
+    </div>
+
+    <div id="mensagem-erro" class="erro-mensagem"></div>
+    <div id="mensagem-sucesso" class="sucesso-mensagem"></div>
+
+    <button type="submit" class="btn">Cadastrar</button>
+    </form>
+    <form id="cadastro-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script src="../../codigo/api-service.js"></script>
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const mensagemErro = document.getElementById('mensagem-erro');
+            const mensagemSucesso = document.getElementById('mensagem-sucesso');
+
+            mensagemErro.textContent = '';
+            mensagemSucesso.textContent = '';
+
+            // Validação de campos obrigatórios
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('confirmarSenha').value;
+            
+            if (senha !== confirmarSenha) {
+                mensagemErro.textContent = 'As senhas não coincidem';
+                return;
+            }
+
+            try {
+                const formData = {
+                    nome: document.getElementById('nome').value,
+                    email: document.getElementById('email').value,
+                    senha: senha,
+                    peso: parseFloat(document.getElementById('peso').value),
+                    altura: parseInt(document.getElementById('altura').value),
+                    idade: parseInt(document.getElementById('idade').value),
+                    sexo: document.querySelector('input[name="sexo"]:checked').value,
+                    objetivo: document.getElementById('objetivo').value,
+                    dieta: document.getElementById('dieta').value,
+                    alergias: document.getElementById('alergias').value.split(',').map(item => item.trim()).filter(item => item)
+                };
+
+                // Envio para a API
+                const response = await APIService.usuarios.cadastrar(formData);
+                
+                mensagemSucesso.textContent = 'Cadastro realizado com sucesso!';
+                
+                // Redirecionar para o login após 2 segundos
+                setTimeout(() => {
+                    window.location.href = 'Login.html';
+                }, 2000);
+
+                } catch (error) {
+                mensagemErro.textContent = error.message || 'Erro ao realizar o cadastro';
+            }
+        });
+
+                // Chamada à API para cadastrar o usuário
+                await APIService.usuarios.cadastrar({
+                    nome, email, senha, peso, altura, idade, sexo, objetivo, dieta, alergias
+                });
+    </script>
+</body>
+</html>
